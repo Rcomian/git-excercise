@@ -7,18 +7,18 @@ function printDate() {
     console.log(`Current time is: ${now.toLocaleTimeString()}`);
 
     const days = [
-        { day: "Sunday", fact: "Reflect on the past week and plan the next one." },
-        { day: "Monday", fact: "A fresh start, embrace the week ahead!" },
-        { day: "Tuesday", fact: "Keep the momentum going!" },
-        { day: "Wednesday", fact: "Halfway there, stay strong!" },
-        { day: "Thursday", fact: "The weekend is almost in sight." },
-        { day: "Friday", fact: "Finish strong, you've got this!" },
-        { day: "Saturday", fact: "Time to relax and recharge." },
+        { day: "Sunday", motivation: "Reflect on the past week and plan the next one." },
+        { day: "Monday", motivation: "A fresh start, embrace the week ahead!" },
+        { day: "Tuesday", motivation: "Keep the momentum going!" },
+        { day: "Wednesday", motivation: "Halfway there, stay strong!" },
+        { day: "Thursday", motivation: "The weekend is almost in sight." },
+        { day: "Friday", motivation: "Finish strong, you've got this!" },
+        { day: "Saturday", motivation: "Time to relax and recharge." },
     ];
 
     const dayIndex = now.getDay();
     const dayName = days[dayIndex].day;
-    const motivationalQuote = days[dayIndex].fact;
+    const motivationalQuote = days[dayIndex].motivation;
 
     console.log(`It's ${dayName}. ${motivationalQuote}`);
 

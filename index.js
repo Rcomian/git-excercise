@@ -1,1 +1,4 @@
-console.log(`Hello, World!`)
+const printGreeting = require('./greetingPrinter');
+
+printGreeting();
+

@@ -4,5 +4,4 @@ const printWeatherForecast = require('./weatherForecast');
 
 printGreeting("John Doe");
 printDate();
-// Call the weather forecast function with a city of your choice
-printWeatherForecast("San Francisco");
+printWeatherForecast("London"); // Now specifying "London" to get its weather forecast

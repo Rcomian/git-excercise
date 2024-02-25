@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const log = require('./logger'); // Make sure the path is correct based on your project structure
 
 function printDate() {
     const now = new Date();
@@ -36,7 +37,7 @@ function printDate() {
             console.error("Could not read custom message file:", err);
             return;
         }
-        console.log(`Custom message: ${data}`);
+        log(`Custom message: ${data}`, { toConsole: true, toFile: true });
     });
 }
 

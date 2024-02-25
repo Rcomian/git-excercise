@@ -24,7 +24,7 @@ function printWeatherForecast(city = "New York") {
     // Select a random next-day forecast
     const nextDayForecast = nextDayForecasts[Math.floor(Math.random() * nextDayForecasts.length)];
     const log = require('./logger');
-    log(`Weather Forecast for ${city}: ${nextDayForecast}`, {toFile: true}); // Now logs to both console and file. Adjust as needed.
+    log(`Weather Forecast for ${city} tomorrow: ${nextDayForecast}`, {toFile: true}); // Now logs to both console and file. Adjust as needed.
 }
 
 module.exports = printWeatherForecast;

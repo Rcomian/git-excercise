@@ -1,5 +1,6 @@
 const printGreeting = require('./greetingPrinter');
 const printDate = require('./datePrinter');
 
-printGreeting();
+// Example of specifying a name
+printGreeting("John Doe");
 printDate();

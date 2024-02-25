@@ -6,6 +6,13 @@ function printDate() {
     console.log(`Today's date is: ${now.toLocaleDateString()}`);
     console.log(`Current time is: ${now.toLocaleTimeString()}`);
 
+    // Calculate days remaining in the year
+    const endOfYear = new Date(now.getFullYear(), 11, 31); // December 31st
+    const msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
+    const daysRemaining = Math.round((endOfYear - now) / msPerDay);
+
+    console.log(`Days remaining in the year: ${daysRemaining}`);
+    
     const days = [
         { day: "Sunday", motivation: "Reflect on the past week and plan the next one." },
         { day: "Monday", motivation: "A fresh start, embrace the week ahead!" },

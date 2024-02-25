@@ -62,7 +62,8 @@ function printGreeting(name = "Guest", theme = "General") {
 
     // Select a random greeting from the appropriate list
     const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-    console.log(greeting);
+    const log = require('./logger');
+    log(greeting, {toFile: true}); // Now logs to both console and file. Adjust as needed.
 }
 
 module.exports = printGreeting;

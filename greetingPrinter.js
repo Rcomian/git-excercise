@@ -1,4 +1,4 @@
-function printGreeting(name = "Guest") {
+function printGreeting(name = "Guest", theme = "General") {
     const hour = new Date().getHours();
     let timeOfDayGreeting;
 
@@ -10,20 +10,57 @@ function printGreeting(name = "Guest") {
         timeOfDayGreeting = "Good evening";
     }
 
-    const greetings = [
+    const generalGreetings = [
         `${timeOfDayGreeting}, ${name}. Welcome to our exciting demo project!`,
         `${timeOfDayGreeting} ${name}! Glad you're here to explore with us.`,
-        `${timeOfDayGreeting} ${name}! Ready to dive deeper into our project?`,
-        `${timeOfDayGreeting}, ${name}. Let's navigate through our demo together.`,
-        `${timeOfDayGreeting} ${name}, discover what we've prepared for you.`,
-        `${timeOfDayGreeting}, ${name}! Embrace the new challenges and opportunities.`,
-        `${timeOfDayGreeting} ${name}! Today is a perfect day for a fresh start.`,
-        `${timeOfDayGreeting}, ${name}. Let's make today productive and fun.`,
-        `${timeOfDayGreeting} ${name}, your curiosity will lead to amazing discoveries.`,
-        `${timeOfDayGreeting}, ${name}. We're thrilled to have you with us on this journey.`
+        `${timeOfDayGreeting} ${name}, ready to dive deeper into our project?`,
+        `Hey ${name}, ${timeOfDayGreeting}! Let's make today productive.`,
+        `${timeOfDayGreeting} ${name}! Looking forward to another fantastic day.`,
+        `${timeOfDayGreeting}, ${name}. Let's achieve great things today.`,
+        `${timeOfDayGreeting} ${name}! Every day brings new opportunities.`,
+        `A very ${timeOfDayGreeting}, ${name}. Let's start the day with a smile.`,
+        `${timeOfDayGreeting} ${name}, let's tackle today's challenges together.`,
+        `${timeOfDayGreeting}, ${name}. Here's to a day full of possibilities.`
     ];
 
-    // Select a random greeting
+    const holidayGreetings = [
+        `Merry Christmas, ${name}! Wishing you a joyful holiday season.`,
+        `Happy Holidays, ${name}! May your days be filled with peace and joy.`,
+        `Season's Greetings, ${name}! Wishing you a wonderful holiday time.`,
+        `Happy New Year, ${name}! Here's to a year full of blessings and beyond.`
+    ];
+
+    const workGreetings = [
+        `${timeOfDayGreeting}, ${name}. Ready to conquer the workday?`,
+        `Good day at work, ${name}! Let's achieve great things today.`,
+        `${timeOfDayGreeting} ${name}, let's be productive and positive today.`,
+        `Here's to a successful day at work, ${name}!`
+    ];
+
+    const weekendGreetings = [
+        `Happy Weekend, ${name}! Time to relax and enjoy.`,
+        `${timeOfDayGreeting}, ${name}. Enjoy your weekend to the fullest!`,
+        `It's the weekend, ${name}! Have a fantastic time.`,
+        `Weekend wishes, ${name}! May your days off be a joy.`
+    ];
+
+    let greetings;
+
+    switch (theme) {
+        case "Holiday":
+            greetings = holidayGreetings;
+            break;
+        case "Work":
+            greetings = workGreetings;
+            break;
+        case "Weekend":
+            greetings = weekendGreetings;
+            break;
+        default:
+            greetings = generalGreetings;
+    }
+
+    // Select a random greeting from the appropriate list
     const greeting = greetings[Math.floor(Math.random() * greetings.length)];
     console.log(greeting);
 }

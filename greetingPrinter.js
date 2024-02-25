@@ -13,6 +13,14 @@ function printGreeting(name = "Guest") {
     const greetings = [
         `${timeOfDayGreeting}, ${name}. Welcome to our exciting demo project!`,
         `${timeOfDayGreeting} ${name}! Glad you're here to explore with us.`,
+        `${timeOfDayGreeting} ${name}! Ready to dive deeper into our project?`,
+        `${timeOfDayGreeting}, ${name}. Let's navigate through our demo together.`,
+        `${timeOfDayGreeting} ${name}, discover what we've prepared for you.`,
+        `${timeOfDayGreeting}, ${name}! Embrace the new challenges and opportunities.`,
+        `${timeOfDayGreeting} ${name}! Today is a perfect day for a fresh start.`,
+        `${timeOfDayGreeting}, ${name}. Let's make today productive and fun.`,
+        `${timeOfDayGreeting} ${name}, your curiosity will lead to amazing discoveries.`,
+        `${timeOfDayGreeting}, ${name}. We're thrilled to have you with us on this journey.`
     ];
 
     // Select a random greeting

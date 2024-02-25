@@ -1,40 +1,29 @@
 function printWeatherForecast(city = "New York") {
     const forecasts = [
-        { 
-            city: "New York", 
-            forecast: "Sunny with a high of 75°F and a low of 65°F.",
-            nextDay: "Partly cloudy with a chance of rain."
-        },
-        { 
-            city: "San Francisco", 
-            forecast: "Foggy in the morning, sunny in the afternoon.",
-            nextDay: "Light fog and winds in the evening."
-        },
-        { 
-            city: "Seattle", 
-            forecast: "Cloudy with occasional rain showers.",
-            nextDay: "Rain showers continuing, cooler temperatures."
-        },
-        { 
-            city: "Miami", 
-            forecast: "Hot and humid with a chance of thunderstorms.",
-            nextDay: "Thunderstorms likely, high humidity."
-        },
-        { 
-            city: "London", 
-            forecast: "Light rain and cool temperatures.",
-            nextDay: "Overcast with breaks of sunshine."
-        },
+        { city: "New York", todayForecast: "Sunny with a high of 75°F and a low of 65°F." },
+        { city: "San Francisco", todayForecast: "Foggy in the morning, sunny in the afternoon." },
+        { city: "Seattle", todayForecast: "Cloudy with occasional rain showers." },
+        { city: "Miami", todayForecast: "Hot and humid with a chance of thunderstorms." },
+        { city: "London", todayForecast: "Light rain and cool temperatures." },
+    ];
+
+    const nextDayForecasts = [
+        "Clear skies expected throughout the day.",
+        "Intermittent clouds with a chance of light rain.",
+        "Sunny, with occasional gusty winds in the afternoon.",
+        "Heavy rainfall expected in the evening.",
+        "Mild temperatures with overcast skies.",
+        "A thunderstorm possible in the afternoon.",
+        "Warm with high humidity levels.",
     ];
 
     // Simulate fetching forecast for the specified city
-    const forecast = forecasts.find(f => f.city === city);
-    if (forecast) {
-        console.log(`Weather Forecast for ${city}: ${forecast.forecast}`);
-        console.log(`Next day outlook: ${forecast.nextDay}`);
-    } else {
-        console.log(`Forecast not available for your city.`);
-    }
+    const cityForecast = forecasts.find(f => f.city === city)?.todayForecast || "Forecast not available for your city.";
+    console.log(`Weather Forecast for ${city} today: ${cityForecast}`);
+
+    // Select a random next-day forecast
+    const nextDayForecast = nextDayForecasts[Math.floor(Math.random() * nextDayForecasts.length)];
+    console.log(`Forecast for ${city} tomorrow: ${nextDayForecast}`);
 }
 
 module.exports = printWeatherForecast;
